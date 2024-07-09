@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/bottom_nav"
+    app:startDestination="@id/booksScreen">
+
+    <fragment
+        android:id="@+id/booksScreen"
+        android:name="uz.bahadew.bookappupdate.presentation.screen.main.pages.books.BooksScreen"
+        android:label="screen_books"
+        tools:layout="@layout/screen_books" />
+
+    <fragment
+        android:id="@+id/savedScreen"
+        android:name="uz.bahadew.bookappupdate.presentation.screen.main.pages.saved.SavedScreen"
+        android:label="screen_saved"
+        tools:layout="@layout/screen_saved" />
+    <fragment
+        android:id="@+id/searchScreen"
+        android:name="uz.bahadew.bookappupdate.presentation.screen.main.pages.search.SearchScreen"
+        android:label="screen_search"
+        tools:layout="@layout/screen_search" />
+</navigation>

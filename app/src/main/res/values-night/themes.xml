@@ -1,0 +1,12 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.BookAppUpdate" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your dark theme here. -->
+        <!-- <item name="colorPrimary">@color/my_dark_primary</item> -->
+        <item name="android:statusBarColor">@color/app_bg_color</item>
+        <item name="colorPrimary">@color/app_active_color</item>
+        <item name="colorPrimaryDark">@color/app_active_color</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowLightStatusBar">true</item>
+    </style>
+</resources>

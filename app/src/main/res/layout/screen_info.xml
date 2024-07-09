@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_bg_color"
+    tools:context="uz.bahadew.bookappupdate.presentation.screen.main.info.InfoScreen">
+
+    <View
+        android:id="@+id/bar"
+        android:layout_width="match_parent"
+        android:layout_height="?android:actionBarSize"
+        android:background="@color/app_bg_color"
+        android:elevation="3dp"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/back"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="15dp"
+        android:background="@drawable/bg_back_ripple"
+        android:contentDescription="@string/app_name"
+        android:elevation="3dp"
+        android:padding="8dp"
+        android:src="@drawable/back"
+        app:layout_constraintBottom_toBottomOf="@id/bar"
+        app:layout_constraintLeft_toLeftOf="@id/bar"
+        app:layout_constraintTop_toTopOf="@id/bar" />
+
+    <CheckBox
+        android:id="@+id/checkbox"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="10dp"
+        android:button="@drawable/bg_checkbox"
+        app:layout_constraintBottom_toBottomOf="@id/bar"
+        app:layout_constraintRight_toRightOf="@id/bar"
+        android:elevation="3dp"
+        android:background="@drawable/bg_checkbox_ripple"
+        app:layout_constraintTop_toTopOf="@id/bar" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/bar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="30dp"
+                app:cardBackgroundColor="#FFF"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="10dp">
+
+                <ImageView
+                    android:id="@+id/img"
+                    android:layout_width="260dp"
+                    android:layout_height="360dp"
+                    android:layout_gravity="center"
+                    android:contentDescription="@string/app_name"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/template" />
+            </androidx.cardview.widget.CardView>
+
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="24dp"
+                android:fontFamily="sans-serif-medium"
+                android:gravity="center"
+                android:text="Book Name"
+                android:textSize="24dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/author"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="18dp"
+                android:fontFamily="sans-serif-medium"
+                android:text="Author"
+                android:gravity="center"
+                android:textSize="17dp" />
+
+            <TextView
+                android:id="@+id/btn_read"
+                android:layout_width="200dp"
+                android:layout_height="56dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/bg_read_book"
+                android:elevation="3dp"
+                android:gravity="center"
+                android:text="Read Book"
+                android:textColor="#FFF"
+                android:textSize="16dp"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="20dp"
+                android:background="@color/app_line_color" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="sans-serif-medium"
+                android:text="Overview"
+                android:textSize="18dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/overview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:justificationMode="inter_word"
+                android:text="Overview"
+                android:textSize="17dp" />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

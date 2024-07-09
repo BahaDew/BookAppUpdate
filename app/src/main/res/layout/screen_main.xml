@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="uz.bahadew.bookappupdate.presentation.screen.main.MainScreen">
+
+    <fragment
+        android:id="@+id/container"
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:defaultNavHost="true"
+        app:layout_constraintBottom_toTopOf="@id/box_bnv"
+        app:layout_constraintTop_toTopOf="parent"
+        app:navGraph="@navigation/bottom_nav" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/box_bnv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="@color/app_bg_color"
+        app:cardElevation="10dp"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bnv"
+            style="@style/menu_style"
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:background="@color/app_bg_color"
+            android:paddingTop="2dp"
+            android:paddingBottom="2dp"
+            app:itemBackground="@drawable/menu_item_bg_ripple"
+            app:itemIconTint="@color/menu_text_color"
+            app:itemTextColor="@color/menu_text_color"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:menu="@menu/main_menu" />
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
