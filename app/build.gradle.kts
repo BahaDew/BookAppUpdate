@@ -68,5 +68,5 @@ dependencies {
     implementation (libs.viewbindingpropertydelegate.noreflection)
     implementation (libs.glide)
 
-    implementation (libs.android.pdf.viewer)
+    implementation ("com.github.mhiew:android-pdf-viewer:3.2.0-beta.3")
 }
